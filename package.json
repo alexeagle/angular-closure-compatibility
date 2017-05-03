@@ -25,7 +25,7 @@
   },
   "scripts": {
     "postinstall": "webdriver-manager update",
-    "build:moment": "ngc -p moment && java -jar node_modules/google-closure-compiler/compiler.jar --flagfile closure.base.conf node_modules/moment/moment.js node_modules/moment/package.json moment/externs.js --entry_point=moment/built/bootstrap --js_output_file=moment/built/bundle.js",
+    "build:moment": "ngc -p moment && java -jar node_modules/google-closure-compiler/compiler.jar --flagfile closure.base.conf moment/node_modules/moment/moment.js moment/node_modules/moment/package.json moment/externs.js --entry_point=moment/built/bootstrap --js_output_file=moment/built/bundle.js",
     "build": "yarn run build:moment",
     "serve": "lite-server -c browser.config.json",
     "test": "tsc -p tsconfig.tests.json && concurrently \"yarn run serve\" protractor --kill-others --success first"
