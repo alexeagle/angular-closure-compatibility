@@ -1,0 +1,33 @@
+{
+  "name": "angular-closure-compatibility",
+  "version": "1.0.0",
+  "description": "Compatibility checks for libraries",
+  "main": "index.js",
+  "author": "Alex Eagle <alexeagle@google.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@angular/compiler": "^4.1.0",
+    "@angular/compiler-cli": "^4.1.0",
+    "@types/jasmine": "^2.5.47",
+    "clang-format": "^1.0.50",
+    "concurrently": "^3.4.0",
+    "google-closure-compiler": "20170409.0.0",
+    "lite-server": "^2.3.0",
+    "protractor": "^5.1.1",
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "@angular/common": "^4.1.0",
+    "@angular/core": "^4.1.0",
+    "@angular/platform-browser": "^4.1.0",
+    "rxjs": "^5.3.1",
+    "zone.js": "^0.8.9"
+  },
+  "scripts": {
+    "postinstall": "webdriver-manager update",
+    "build:moment": "ngc -p moment && java -jar node_modules/google-closure-compiler/compiler.jar --flagfile closure.base.conf node_modules/moment/moment.js node_modules/moment/package.json moment/externs.js --entry_point=moment/built/bootstrap --js_output_file=moment/built/bundle.js",
+    "build": "yarn run build:moment",
+    "serve": "lite-server -c browser.config.json",
+    "test": "concurrently \"yarn run serve\" protractor --kill-others --success first"
+  }
+}

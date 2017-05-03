@@ -1,0 +1,23 @@
+{
+    "angularCompilerOptions": {
+        "annotateForClosureCompiler": true,
+        "skipMetadataEmit": true
+    },
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "strict": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "dom",
+            "es5",
+            "es2015.collection",
+            "es2015.iterable",
+            "es2015.promise"
+        ],
+        "types": [
+            "jasmine"
+        ]
+    }
+}

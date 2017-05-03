@@ -1,0 +1,10 @@
+{
+    "extends": "../tsconfig.base",
+    "angularCompilerOptions": {
+        "annotateForClosureCompiler": true,
+        "skipMetadataEmit": true
+    },
+    "compilerOptions": {
+        "outDir": "built"
+    }
+}
