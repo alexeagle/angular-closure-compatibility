@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <script src="/node_modules/angular/angular.min.js"></script>
+  <script>
+        angular.module('angularjs-app',[]);
+        angular.module('angularjs-app').controller('testController', function(){
+          this.message = 'Hello from AngularJS';
+        });
+    </script>
+
+</head>
+
+<body>
+    <div ng-controller="testController as testController">
+      <div id="angularJS">{{testController.message}}</div>
+
+      <hello-from-new-angular></hello-from-new-angular>
+    </div>  
+    <script src="/node_modules/zone.js/dist/zone.min.js"></script>
+    <script src="built/bundle.js"></script>
+</body>
+
+</html>

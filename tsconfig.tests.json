@@ -6,6 +6,7 @@
         "outDir": "built"
     },
     "files": [
-        "moment/test.ts"
+        "moment/test.ts",
+        "ng-upgrade/test.ts"
     ]
 }
