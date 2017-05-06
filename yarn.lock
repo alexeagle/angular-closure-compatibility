@@ -32,6 +32,10 @@
   dependencies:
     tsickle "^0.21.0"
 
+"@angular/upgrade@^4.1.0":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@angular/upgrade/-/upgrade-4.1.1.tgz#f04f99caaddd8730d4479ee73d477c8302919e7e"
+
 "@types/jasmine@^2.5.47":
   version "2.5.47"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.47.tgz#bbba9bcf0e95e7890c6f4a47394e8bacaa960eb6"
@@ -100,6 +104,10 @@ ajv@^4.9.1:
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
+
+angular@1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.4.tgz#03b7b15c01a0802d7e2cf593240e604054dc77fb"
 
 ansi-regex@^0.2.0, ansi-regex@^0.2.1:
   version "0.2.1"
@@ -1383,11 +1391,7 @@ mkdirp@0.3.0:
   dependencies:
     minimist "0.0.8"
 
-moment@*:
-  version "2.18.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
-
-moment@2.13.0:
+moment@*, moment@2.13.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.13.0.tgz#24162d99521e6d40f99ae6939e806d2139eaac52"
 

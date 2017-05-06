@@ -8,6 +8,7 @@
   "devDependencies": {
     "@angular/compiler": "^4.1.0",
     "@angular/compiler-cli": "^4.1.0",
+    "@types/angular": "^1.6.17",
     "@types/jasmine": "^2.5.47",
     "clang-format": "^1.0.50",
     "concurrently": "^3.4.0",
@@ -20,6 +21,8 @@
     "@angular/common": "^4.1.0",
     "@angular/core": "^4.1.0",
     "@angular/platform-browser": "^4.1.0",
+    "@angular/upgrade": "^4.1.0",
+    "angular": "1.6.4",
     "moment": "2.13.0",
     "rxjs": "^5.3.1",
     "zone.js": "^0.8.9"
@@ -27,7 +30,8 @@
   "scripts": {
     "postinstall": "webdriver-manager update",
     "build:moment": "ngc -p moment && java -jar node_modules/google-closure-compiler/compiler.jar --flagfile closure.base.conf node_modules/moment/moment.js node_modules/moment/package.json moment/externs.js --entry_point=moment/built/bootstrap --js_output_file=moment/built/bundle.js",
-    "build": "yarn run build:moment",
+    "build:ng-upgrade": "rm -rf ng-upgrade/node_modules && ngc -p ng-upgrade && java -jar node_modules/google-closure-compiler/compiler.jar --flagfile closure.base.conf ng-upgrade/externs.js --entry_point=ng-upgrade/built/bootstrap --js_output_file=ng-upgrade/built/bundle.js",
+    "build": "yarn run build:moment && yarn build:ng-upgrade",
     "serve": "lite-server -c browser.config.json",
     "test": "tsc -p tsconfig.tests.json && concurrently \"yarn run serve\" protractor --kill-others --success first"
   }
