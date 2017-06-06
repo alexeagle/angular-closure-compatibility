@@ -20,6 +20,7 @@
     "@angular/common": "^4.1.0",
     "@angular/core": "^4.1.0",
     "@angular/platform-browser": "^4.1.0",
+    "@ngrx/store": "github:ngrx/store-builds",
     "moment": "2.13.0",
     "rxjs": "^5.3.1",
     "zone.js": "^0.8.9"
@@ -27,7 +28,8 @@
   "scripts": {
     "postinstall": "webdriver-manager update",
     "build:moment": "ngc -p moment && java -jar node_modules/google-closure-compiler/compiler.jar --flagfile closure.base.conf node_modules/moment/moment.js node_modules/moment/package.json moment/externs.js --entry_point=moment/built/bootstrap --js_output_file=moment/built/bundle.js",
-    "build": "yarn run build:moment",
+    "build:ngrx": "rm -rf ngrx/node_modules && ngc -p ngrx && java -jar node_modules/google-closure-compiler/compiler.jar --flagfile closure.base.conf --entry_point=ngrx/built/bootstrap node_modules/@ngrx/store/@ngrx/store.js --js_module_root=node_modules/@ngrx/store --js_output_file=ngrx/built/bundle.js",
+    "build": "yarn run build:moment && yarn run build:ngrx",
     "serve": "lite-server -c browser.config.json",
     "test": "tsc -p tsconfig.tests.json && concurrently \"yarn run serve\" protractor --kill-others --success first"
   }

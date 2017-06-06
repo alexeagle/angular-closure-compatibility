@@ -1,5 +1,5 @@
 exports.config = {
-  specs: ['built/*test.js'],
+  specs: ['built/**/test.js'],
   capabilities:
       {browserName: 'chrome', chromeOptions: {args: ['--no-sandbox']}},
   directConnect: true,
