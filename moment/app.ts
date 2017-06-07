@@ -1,10 +1,9 @@
-import 'moment';
+import * as momentx from 'moment';
+declare var moment: typeof momentx;
 
 import {Component, Injectable, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import * as moment_type from 'moment';
 
-declare var moment: typeof moment_type;
 
 @Component({
   selector: 'hello',
