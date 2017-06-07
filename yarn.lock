@@ -22,15 +22,19 @@
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-4.1.0.tgz#72ec173316879571880c9c483ed6dfc0caab94b0"
 
-"@angular/platform-browser@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-4.1.0.tgz#b981386be1a36f2af7f0679447fd97b7267b25de"
-
 "@angular/tsc-wrapped@4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-4.1.0.tgz#07cbd61d91adde4c2daf9a41605152952b8832b3"
   dependencies:
     tsickle "^0.21.0"
+
+"@ngrx/platform@github:ngrx/platform":
+  version "4.0.0-alpha.0"
+  resolved "https://codeload.github.com/ngrx/platform/tar.gz/e21d688aff4fea52d7659c73d7bde48c97efe09b"
+
+"@ngrx/store@github:ngrx/store-builds":
+  version "4.0.0-alpha.0"
+  resolved "https://codeload.github.com/ngrx/store-builds/tar.gz/c4723c6e41f857ba7a5c0d34bf7435024be27ade"
 
 "@types/jasmine@^2.5.47":
   version "2.5.47"
@@ -1383,11 +1387,7 @@ mkdirp@0.3.0:
   dependencies:
     minimist "0.0.8"
 
-moment@*:
-  version "2.18.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
-
-moment@2.13.0:
+moment@*, moment@2.13.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.13.0.tgz#24162d99521e6d40f99ae6939e806d2139eaac52"
 
